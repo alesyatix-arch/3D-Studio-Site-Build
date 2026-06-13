@@ -10,6 +10,12 @@ export const Route = createFileRoute("/prices")({
     meta: [
       { title: "Стоимость 3D-визуализации — 3D-KULAGIN" },
       { name: "description", content: "Ориентиры по стоимости архитектурной, интерьерной и предметной 3D-визуализации." },
+      { property: "og:title", content: "Стоимость 3D-визуализации — 3D-KULAGIN" },
+      { property: "og:description", content: "Цены на архитектурную, интерьерную и предметную визуализацию. Расчёт по ТЗ." },
+      { property: "og:url", content: "https://viz-studio-build.lovable.app/prices" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://viz-studio-build.lovable.app/prices" },
     ],
   }),
   component: () => (

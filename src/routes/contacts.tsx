@@ -8,6 +8,12 @@ export const Route = createFileRoute("/contacts")({
     meta: [
       { title: "Контакты — 3D-KULAGIN" },
       { name: "description", content: "Свяжитесь со студией 3D-визуализации 3D-KULAGIN. Расчёт проекта по ТЗ." },
+      { property: "og:title", content: "Контакты — 3D-KULAGIN" },
+      { property: "og:description", content: "Email, телефон, WhatsApp и Telegram. Расчёт проекта по ТЗ." },
+      { property: "og:url", content: "https://viz-studio-build.lovable.app/contacts" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://viz-studio-build.lovable.app/contacts" },
     ],
   }),
   component: () => (

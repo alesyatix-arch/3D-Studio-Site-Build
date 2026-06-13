@@ -198,6 +198,10 @@ export const Route = createFileRoute("/developers")({
         content:
           "Продавайте объект до завершения строительства. Архитектурные рендеры и материалы для отдела продаж.",
       },
+      { property: "og:url", content: "https://viz-studio-build.lovable.app/developers" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://viz-studio-build.lovable.app/developers" },
     ],
   }),
   component: DevelopersPage,

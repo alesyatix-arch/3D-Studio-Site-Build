@@ -164,6 +164,10 @@ export const Route = createFileRoute("/designers")({
       { name: "description", content: "Фотореалистичная визуализация интерьеров по дизайн-проекту для быстрого согласования концепции с клиентом." },
       { property: "og:title", content: "3D-визуализация интерьеров для дизайнеров и студий" },
       { property: "og:description", content: "Согласуйте дизайн-проект быстрее. Реалистичные рендеры по вашему проекту." },
+      { property: "og:url", content: "https://viz-studio-build.lovable.app/designers" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://viz-studio-build.lovable.app/designers" },
     ],
   }),
   component: DesignersPage,

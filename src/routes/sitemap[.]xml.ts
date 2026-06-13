@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const BASE_URL = "";
+const BASE_URL = "https://viz-studio-build.lovable.app";
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {

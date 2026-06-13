@@ -73,14 +73,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:site_name", content: "3D-KULAGIN" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
@@ -88,6 +83,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
     ],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "3D-KULAGIN",
+        description: "Студия 3D-визуализации для девелоперов, производителей и дизайнеров с 2013 года.",
+        url: "https://viz-studio-build.lovable.app",
+        email: "info@3d-kulagin.ru",
+        telephone: "+7 (495) 476-57-88",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Москва",
+          addressCountry: "RU",
+        },
+      }),
+    }],
   }),
   shellComponent: RootShell,
   component: RootComponent,

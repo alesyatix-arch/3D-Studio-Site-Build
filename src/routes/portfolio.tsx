@@ -63,6 +63,12 @@ export const Route = createFileRoute("/portfolio")({
     meta: [
       { title: "Портфолио — 3D-KULAGIN" },
       { name: "description", content: "Примеры проектов студии 3D-KULAGIN: архитектурная визуализация, визуализация для производителей и интерьерная визуализация." },
+      { property: "og:title", content: "Портфолио — 3D-KULAGIN" },
+      { property: "og:description", content: "Архитектура, интерьеры, предметная визуализация. Реализованные проекты студии." },
+      { property: "og:url", content: "https://viz-studio-build.lovable.app/portfolio" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://viz-studio-build.lovable.app/portfolio" },
     ],
   }),
   component: PortfolioPage,

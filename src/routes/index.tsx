@@ -60,6 +60,10 @@ export const Route = createFileRoute("/")({
         content:
           "Фотореалистичные 3D-визуализации для продаж недвижимости, каталогов и презентаций.",
       },
+      { property: "og:url", content: "https://viz-studio-build.lovable.app/" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://viz-studio-build.lovable.app/" },
     ],
   }),
   component: HomePage,
@@ -401,21 +405,19 @@ function HomePage() {
             eyebrow="Clients"
             title="Нам доверяют девелоперы, производители и ритейлеры"
           />
-          <div className="mt-12 space-y-8">
+          <div className="mt-12 space-y-10">
             {Object.entries(CLIENTS).map(([group, items]) => (
               <div key={group}>
                 <div className="eyebrow mb-4">{group}</div>
-                <div
-                  className="grid gap-px bg-hairline border hairline grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
-                >
+                <div className="flex flex-wrap justify-center gap-x-10 gap-y-6 sm:gap-x-14 border-y hairline py-8">
                   {items.map((c) => (
-                    <div key={c.name} className="bg-background h-20 flex items-center justify-center px-4 text-sm font-display font-medium text-foreground/70">
+                    <div key={c.name} className="flex items-center justify-center h-12 text-sm font-display font-medium text-foreground/70">
                       {c.logo ? (
                         <img
                           src={c.logo}
                           alt={c.name}
                           loading="lazy" decoding="async"
-                          className="max-h-10 max-w-full object-contain opacity-80"
+                          className="max-h-10 w-auto object-contain"
                           onError={(e) => {
                             const img = e.currentTarget;
                             img.style.display = "none";

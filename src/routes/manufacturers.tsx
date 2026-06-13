@@ -205,6 +205,10 @@ export const Route = createFileRoute("/manufacturers")({
         property: "og:description",
         content: "Замена дорогой фотосъёмки. Серийный визуальный контент для коллекций и каталогов.",
       },
+      { property: "og:url", content: "https://viz-studio-build.lovable.app/manufacturers" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://viz-studio-build.lovable.app/manufacturers" },
     ],
   }),
   component: ManufacturersPage,
