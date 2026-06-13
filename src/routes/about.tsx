@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
+import { siteUrl } from "@/lib/site-url";
 import { CTAButton, Eyebrow } from "@/components/site/primitives";
 import { InlineCTA } from "@/components/site/InlineCTA";
 import { ContactBar } from "@/components/site/ContactBar";
@@ -17,10 +18,10 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "Команда 3D-визуализаторов, моделлеров и менеджеров. Работаем с 2013 года." },
       { property: "og:title", content: "О студии — 3D-KULAGIN" },
       { property: "og:description", content: "12 лет на рынке. 5000+ проектов. 500+ B2B-клиентов." },
-      { property: "og:url", content: "https://viz-studio-build.lovable.app/about" },
+      { property: "og:url", content: siteUrl("/about") },
     ],
     links: [
-      { rel: "canonical", href: "https://viz-studio-build.lovable.app/about" },
+      { rel: "canonical", href: siteUrl("/about") },
     ],
   }),
   component: AboutPage,

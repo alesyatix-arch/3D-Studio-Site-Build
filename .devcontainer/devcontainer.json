@@ -1,0 +1,19 @@
+{
+  "name": "3D Studio Build",
+  "image": "oven/bun:latest",
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "postCreateCommand": "bun install --frozen-lockfile",
+  "customizations": {
+    "vscode": {
+      "extensions": ["oven.bun-vscode"]
+    }
+  },
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": {
+      "label": "Vite dev server",
+      "onAutoForward": "notify"
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
+import { siteUrl } from "@/lib/site-url";
 
 import bgExterior from "@/assets/bg/exterior.jpg";
 
@@ -10,10 +11,10 @@ export const Route = createFileRoute("/contacts")({
       { name: "description", content: "Свяжитесь со студией 3D-визуализации 3D-KULAGIN. Расчёт проекта по ТЗ." },
       { property: "og:title", content: "Контакты — 3D-KULAGIN" },
       { property: "og:description", content: "Email, телефон, WhatsApp и Telegram. Расчёт проекта по ТЗ." },
-      { property: "og:url", content: "https://viz-studio-build.lovable.app/contacts" },
+      { property: "og:url", content: siteUrl("/contacts") },
     ],
     links: [
-      { rel: "canonical", href: "https://viz-studio-build.lovable.app/contacts" },
+      { rel: "canonical", href: siteUrl("/contacts") },
     ],
   }),
   component: () => (

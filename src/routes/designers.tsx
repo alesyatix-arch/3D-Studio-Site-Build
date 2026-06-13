@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useCallback, useEffect, useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
+import { siteUrl } from "@/lib/site-url";
 import {
   CTAButton,
   Eyebrow,
@@ -164,10 +165,10 @@ export const Route = createFileRoute("/designers")({
       { name: "description", content: "Фотореалистичная визуализация интерьеров по дизайн-проекту для быстрого согласования концепции с клиентом." },
       { property: "og:title", content: "3D-визуализация интерьеров для дизайнеров и студий" },
       { property: "og:description", content: "Согласуйте дизайн-проект быстрее. Реалистичные рендеры по вашему проекту." },
-      { property: "og:url", content: "https://viz-studio-build.lovable.app/designers" },
+      { property: "og:url", content: siteUrl("/designers") },
     ],
     links: [
-      { rel: "canonical", href: "https://viz-studio-build.lovable.app/designers" },
+      { rel: "canonical", href: siteUrl("/designers") },
     ],
   }),
   component: DesignersPage,
@@ -327,4 +328,3 @@ function DesignersPage() {
     </SiteLayout>
   );
 }
-

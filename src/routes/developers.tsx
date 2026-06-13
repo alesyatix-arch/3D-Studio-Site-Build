@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
+import { siteUrl } from "@/lib/site-url";
 import {
   CTAButton,
   Eyebrow,
@@ -198,10 +199,10 @@ export const Route = createFileRoute("/developers")({
         content:
           "Продавайте объект до завершения строительства. Архитектурные рендеры и материалы для отдела продаж.",
       },
-      { property: "og:url", content: "https://viz-studio-build.lovable.app/developers" },
+      { property: "og:url", content: siteUrl("/developers") },
     ],
     links: [
-      { rel: "canonical", href: "https://viz-studio-build.lovable.app/developers" },
+      { rel: "canonical", href: siteUrl("/developers") },
     ],
   }),
   component: DevelopersPage,

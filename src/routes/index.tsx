@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, FileInput, Target, Calculator, PenTool, MessageSquare, PackageCheck, Database } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
+import { siteUrl } from "@/lib/site-url";
 import {
   CTAButton,
   Eyebrow,
@@ -60,10 +61,10 @@ export const Route = createFileRoute("/")({
         content:
           "Фотореалистичные 3D-визуализации для продаж недвижимости, каталогов и презентаций.",
       },
-      { property: "og:url", content: "https://viz-studio-build.lovable.app/" },
+      { property: "og:url", content: siteUrl("/") },
     ],
     links: [
-      { rel: "canonical", href: "https://viz-studio-build.lovable.app/" },
+      { rel: "canonical", href: siteUrl("/") },
     ],
   }),
   component: HomePage,
@@ -564,4 +565,3 @@ function WhyCarousel({ slides }: { slides: { src: string; alt: string }[] }) {
     </div>
   );
 }
-

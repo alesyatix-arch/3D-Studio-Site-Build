@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
+import { siteUrl } from "@/lib/site-url";
 import { CTAButton, Eyebrow, PricingTable } from "@/components/site/primitives";
 import { InlineCTA } from "@/components/site/InlineCTA";
 import { ContactBar } from "@/components/site/ContactBar";
@@ -12,10 +13,10 @@ export const Route = createFileRoute("/prices")({
       { name: "description", content: "Ориентиры по стоимости архитектурной, интерьерной и предметной 3D-визуализации." },
       { property: "og:title", content: "Стоимость 3D-визуализации — 3D-KULAGIN" },
       { property: "og:description", content: "Цены на архитектурную, интерьерную и предметную визуализацию. Расчёт по ТЗ." },
-      { property: "og:url", content: "https://viz-studio-build.lovable.app/prices" },
+      { property: "og:url", content: siteUrl("/prices") },
     ],
     links: [
-      { rel: "canonical", href: "https://viz-studio-build.lovable.app/prices" },
+      { rel: "canonical", href: siteUrl("/prices") },
     ],
   }),
   component: () => (

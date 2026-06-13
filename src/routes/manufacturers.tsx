@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, useCallback } from "react";
 import { SiteLayout } from "@/components/site/Layout";
+import { siteUrl } from "@/lib/site-url";
 import {
   CTAButton,
   Eyebrow,
@@ -205,10 +206,10 @@ export const Route = createFileRoute("/manufacturers")({
         property: "og:description",
         content: "Замена дорогой фотосъёмки. Серийный визуальный контент для коллекций и каталогов.",
       },
-      { property: "og:url", content: "https://viz-studio-build.lovable.app/manufacturers" },
+      { property: "og:url", content: siteUrl("/manufacturers") },
     ],
     links: [
-      { rel: "canonical", href: "https://viz-studio-build.lovable.app/manufacturers" },
+      { rel: "canonical", href: siteUrl("/manufacturers") },
     ],
   }),
   component: ManufacturersPage,

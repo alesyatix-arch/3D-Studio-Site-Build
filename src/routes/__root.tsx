@@ -10,6 +10,7 @@ import {
 
 import appCss from "../styles.css?url";
 import { ImageLightbox } from "@/components/site/ImageLightbox";
+import { SITE_URL } from "@/lib/site-url";
 
 function NotFoundComponent() {
   return (
@@ -90,7 +91,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         "@type": "Organization",
         name: "3D-KULAGIN",
         description: "Студия 3D-визуализации для девелоперов, производителей и дизайнеров с 2013 года.",
-        url: "https://viz-studio-build.lovable.app",
+        url: SITE_URL,
         email: "info@3d-kulagin.ru",
         telephone: "+7 (495) 476-57-88",
         address: {

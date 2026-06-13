@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useCallback, useEffect, useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
+import { siteUrl } from "@/lib/site-url";
 import { InlineCTA } from "@/components/site/InlineCTA";
 import { ContactBar } from "@/components/site/ContactBar";
 
@@ -65,10 +66,10 @@ export const Route = createFileRoute("/portfolio")({
       { name: "description", content: "Примеры проектов студии 3D-KULAGIN: архитектурная визуализация, визуализация для производителей и интерьерная визуализация." },
       { property: "og:title", content: "Портфолио — 3D-KULAGIN" },
       { property: "og:description", content: "Архитектура, интерьеры, предметная визуализация. Реализованные проекты студии." },
-      { property: "og:url", content: "https://viz-studio-build.lovable.app/portfolio" },
+      { property: "og:url", content: siteUrl("/portfolio") },
     ],
     links: [
-      { rel: "canonical", href: "https://viz-studio-build.lovable.app/portfolio" },
+      { rel: "canonical", href: siteUrl("/portfolio") },
     ],
   }),
   component: PortfolioPage,
